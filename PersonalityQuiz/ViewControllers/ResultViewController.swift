@@ -47,6 +47,7 @@ class ResultViewController: UIViewController {
         if rabbitCount == result { return .rabbit }
         if turtleCount == result { return .turtle }
         return .dog // потому что Xcode требовал return, он же не знает, что какой-то if должен сработать
+        // как обрабатывать одинаковое количество баллов не было сказано, поэтому беру первое совпавшееся
     }
     
     private func showResults(result: Animal) {

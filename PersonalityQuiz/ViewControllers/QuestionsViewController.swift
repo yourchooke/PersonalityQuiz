@@ -3,6 +3,7 @@
 //  PersonalityQuiz
 //
 //  Created by Alexey Efimov on 30.08.2021.
+//  Edited by Olga Yurchuk on 25.06.2022
 //
 
 import UIKit
@@ -42,7 +43,8 @@ class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let resultViewController = segue.destination as? ResultViewController else { return }
+        resultViewController.chosenAnswers = answersChosen
     }
     
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
